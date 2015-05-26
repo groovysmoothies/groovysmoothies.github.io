@@ -51,12 +51,14 @@ div#result {
 
 /* instructions styling */
 
-#instructions {
+.message {
     font-size: 3em;
     color: white;
 }
 
-
+.hidden {
+    display: none;
+}
 
 /* fruits half */
 
@@ -103,8 +105,12 @@ div.fruitDump {
     width: 50%;
 }
 
+.half button.inactive {
+    background-color: gray;
+}
+
 .colorBlock {
-    height: 100px;
+    height: 80px;
     width:180px;
 }
 
@@ -116,19 +122,19 @@ div.fruitDump {
     transform: translate(-50%, -10%);
 }
 
-.colorBlock.blockBlue {
+.colorBlock.blue {
     background-color: blue;
 }
 
-.colorBlock.blockRed {
+.colorBlock.red {
     background-color: red;
 }
 
-.colorBlock.blockYellow {
+.colorBlock.yellow {
     background-color: yellow;
 }
 
-.colorBlock.blockClear {
+.colorBlock.clear {
     border: 1px dashed black;
 }
 

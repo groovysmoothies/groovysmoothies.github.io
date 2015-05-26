@@ -1,8 +1,8 @@
-var limit = 5;
+var limit = 6;
 var counter = limit;
 var colors = ['blue', 'yellow', 'red'];
 
-
+var colorBlocks = document.getElementsByClassName('colorBlock');
 
 var groovy = false;
 
@@ -11,7 +11,7 @@ function getRandomColor() {
 }
 
 function getNewCount(counter) {
-  return 1 + Math.floor(Math.random() * counter);
+  return 1 + Math.floor(Math.random() * counter * .5);
 }
 
 function switchRandomColor(currentColor) {
@@ -58,7 +58,14 @@ function fruitdrop(e) {
     --currentCount;
     --counter;
 
+    cb = colorBlocks[counter];
+    cb.classList.remove('clear');
+    cb.classList.add(c);
+
     if (counter == 0) {
+        document.getElementById('blendButton').classList.remove('inactive');
+        document.getElementById('congrats').classList.remove('hidden');
+        document.getElementById('instructions').classList.add('hidden');
       groovy = true;
     }
 
