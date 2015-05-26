@@ -44,13 +44,13 @@
             <div class="fruitContainer">
 
                 <!--Fruits-->
-                    <span class="blue">
+                    <span draggable="true" ondragstart="fruitdrag(event, 'blue')" class="blue">
                         <img src="assets/img/blueberries.png"  alt="blueberries">
                     </span>
-                    <span class="yellow">
+                    <span draggable="true" ondragstart="fruitdrag(event, 'yellow')" class="yellow">
                         <img src="assets/img/banana.png" alt="banana">
                     </span>
-                    <span class="red">
+                    <span draggable="true" ondragstart="fruitdrag(event, 'red')" class="red">
                         <img src="assets/img/apple.png" alt="apple">
                     </span>
 <!--
@@ -111,7 +111,7 @@
             <div class="cup">
                 <img src="assets/img/cup.png" width="" height="" alt="cup" class="center">
 
-                <div class="fruitDump">
+                <div ondrop="fruitdrop(event)" ondragover="fruitallowdrop(event)" class="fruitDump">
                     <p class="centerText">this is a cup</p>
                 </div>
 
