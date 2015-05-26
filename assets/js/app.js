@@ -4,9 +4,9 @@
 
 var limit = 6;
 var counter = limit;
-var colors = ['blue', 'yellow', 'red'];
+var colors = ['blue', 'yellow', 'red', 'orange', 'green'];
 
-var colorBlocks = document.getElementsByClassName('colorBlock');
+var colorBlocks = document.querySelectorAll('.colorBlock');
 
 var groovy = false;
 
@@ -34,6 +34,7 @@ var count = document.getElementById('count');
 function updateText() {
   fruitNumber.innerHTML = currentCount.toString();
   fruitColor.innerHTML = currentColor;
+fruitWord.innerHTML = (currentCount == 1) ? "fruit" : "fruits";
   count.innerHTML = limit - counter;
 }
 
@@ -97,24 +98,17 @@ var congrats = document.getElementById('congrats');
 var instructions = document.getElementById('instructions');
 
 document.getElementById('blendAnother').addEventListener('click', function() {
-    window.location = "index.html";
-    //    window.location = "#game";
-//    window.location.reload();
-//    for (var i = colorBlocks.length-1; i >= 0; --i) {
-//        cb = colorBlocks[i];
-//        cb.className = "colorBlock clear";
-//        console.log(cb.className);
-//        console.log(i);
-//    }
-//
-//    console.log('wtf', i);
-//
-//    counter = limit;
-//    groovy = false;
-//    currentColor = getRandomColor();
-//    currentCount= getNewCount(counter);
-//    updateText();
-//    blendButton.classList.add('inactive');
-//    congrats.classList.add('hidden');
-//    instructions.classList.remove('hidden');
+    for (var i = colorBlocks.length-1; i >= 0; --i) {
+        cb = colorBlocks[i];
+        cb.className = "colorBlock clear";
+    }
+
+    counter = limit;
+    groovy = false;
+    currentColor = getRandomColor();
+    currentCount= getNewCount(counter);
+    updateText();
+    blendButton.classList.add('inactive');
+    congrats.classList.add('hidden');
+    instructions.classList.remove('hidden');
 });

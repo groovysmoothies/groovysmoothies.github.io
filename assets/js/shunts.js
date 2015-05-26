@@ -15,7 +15,7 @@ groovyShunt = new ShuntDiv(document.getElementById('main-container'), [
         enter_above: true,
     }),
 
-    new ShuntDiv.Transition('result', 'game' , 'enterAnimateCss', 'click', {
+    new ShuntDiv.Transition('result', 'intro' , 'enterAnimateCss', 'click', {
         id: 'blendAnother',
         animation_name: 'fadeInUp',
         animation_time: 1000,

@@ -135,6 +135,14 @@ div.fruitDump {
     background-color: yellow;
 }
 
+.colorBlock.orange {
+    background-color: orange;
+}
+
+.colorBlock.green {
+    background-color: green;
+}
+
 .colorBlock.clear {
     border: 1px dashed black;
 }
