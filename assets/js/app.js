@@ -4,7 +4,7 @@
 
 var limit = 6;
 var counter = limit;
-var colors = ['blue', 'yellow', 'red', 'orange', 'green'];
+var colors = ['blue', 'yellow', 'red', 'orange', 'green', 'purple'];
 
 var colorBlocks = document.querySelectorAll('.colorBlock');
 
@@ -26,16 +26,18 @@ function switchRandomColor(currentColor) {
   return newcolor;
 }
 
-
+var instructions = document.getElementById('instructions');
 var fruitNumber = document.getElementById('fruitNumber');
 var fruitColor = document.getElementById('fruitColor');
 var fruitWord = document.getElementById('fruitWord');
 var count = document.getElementById('count');
 
 function updateText() {
+  var instructionsAreHidden = instructions.classList.contains("hidden");
+  instructions.className = "message " + currentColor + (instructionsAreHidden ? " hidden" : "");
   fruitNumber.innerHTML = currentCount.toString();
   fruitColor.innerHTML = currentColor;
-  fruitWord.innerHTML = (currentCount == 1) ? "food" : "foods";
+  fruitWord.innerHTML = (currentCount == 1) ? "item" : "items";
   count.innerHTML = limit - counter;
 }
 
@@ -62,13 +64,15 @@ function fruitdrop(e) {
 
   c = JSON.parse(e.dataTransfer.getData("colors"));
   console.log(c);
-  if ((c.indexOf(currentColor) != 1) && (!groovy)) {
+  if ((c.indexOf(currentColor) != -1) && (!groovy)) {
     --currentCount;
     --counter;
 
     cb = colorBlocks[counter];
     cb.classList.remove('clear');
     cb.classList.add(currentColor);
+
+
 
     if (counter == 0) {
         document.getElementById('blendButton').classList.remove('inactive');
@@ -77,12 +81,15 @@ function fruitdrop(e) {
       groovy = true;
     }
 
+
+
     if (currentCount == 0) {
       currentColor = switchRandomColor(currentColor);
       currentCount = getNewCount(counter);
     }
 
     updateText();
+
   } else {
 
   }
@@ -91,7 +98,6 @@ function fruitdrop(e) {
 function fruitallowdrop(e) {
   e.preventDefault();
 }
-
 
 var blendButton = document.getElementById('blendButton');
 var congrats = document.getElementById('congrats');

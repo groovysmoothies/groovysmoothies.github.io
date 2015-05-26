@@ -39,21 +39,46 @@ div#result {
 
 /*  GAMEPLAY SCREEN */
 
-.half {
-    width: 50vw;
+.left {
+    width: 70vw;
     float: left;
     display: inline;
 }
 
-.half img {
+.right {
+    width: 30vw;
+    float: left;
+    display: inline;
+}
+
+.left img, .right img {
     padding: 0;
 }
 
 /* instructions styling */
 
+.right {
+    margin-top:150px;
+}
+
 .message {
     font-size: 3em;
     color: white;
+
+    width: 100vw;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.message p {
+    position: absolute;
+    display: inline;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#congrats {
+    background-color: hotpink;
 }
 
 .hidden {
@@ -61,6 +86,10 @@ div#result {
 }
 
 /* fruits half */
+
+.counter, #blendButton {
+    transform: translateY(-70px);
+}
 
 .fruitContainer {
     margin-left: 100px;
@@ -71,10 +100,10 @@ div#result {
 }
 
 .fruitContainer img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     height: auto;
-    padding: 20px;
+    padding: 30px;
 
 }
 
@@ -88,6 +117,7 @@ div.cup img {
     position: relative;
     z-index: 1;
     opacity: .7;
+    transform: scale(.75);
 }
 
 div.fruitDump {
@@ -98,21 +128,23 @@ div.fruitDump {
     left: 0;
 
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 
-.half button {
+.right button {
+    margin-top: 30px;
     width: 50%;
+    height: 120px;
 }
 
-.half button.inactive {
+.right button.inactive {
     background-color: gray;
 }
 
 .colorBlock {
-    height: 80px;
-    width:180px;
+    height: 60px;
+    width:125px;
 }
 
 #colorBlocks {
@@ -120,29 +152,32 @@ div.fruitDump {
     bottom: 0;
 
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -30%);
 }
 
-.colorBlock.blue {
+.colorBlock.blue, #instructions.blue {
     background-color: blue;
 }
 
-.colorBlock.red {
-    background-color: red;
+.colorBlock.red, #instructions.red {
+    background-color: crimson;
 }
 
-.colorBlock.yellow {
-    background-color: yellow;
+.colorBlock.yellow, #instructions.yellow {
+    background-color: gold;
 }
 
-.colorBlock.orange {
+.colorBlock.orange, #instructions.orange {
     background-color: orange;
 }
 
-.colorBlock.green {
+.colorBlock.green, #instructions.green {
     background-color: green;
 }
 
+.colorBlock.purple, #instructions.purple {
+    background-color: purple;
+}
 .colorBlock.clear {
     border: 1px dashed black;
 }
@@ -166,7 +201,7 @@ img {
 
 button {
     /* background styling*/
-    background-color: blue;
+    background-color: hotpink;
     width: 50vw;
     height: 20vh;
     border-radius: 30px;

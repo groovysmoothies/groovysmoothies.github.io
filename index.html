@@ -13,9 +13,6 @@
     <!--fonts-->
     <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
 
-    <!--js links-->
-    <!--jQuery first-->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,7 +30,7 @@
 
          <!-- GAMEPLAY SCREEN -->
          <div id="game" class="frame" shunt-frame>
-             <section class="half">
+             <section class="left">
 
              <!--Instructions-->
             <div id="instructions" class="message">
@@ -48,52 +45,60 @@
             <div class="fruitContainer">
 
                 <!--Fruits-->
-                    <span draggable="true" ondragstart="fruitdrag(event, ['blue'])" class="blue">
-                        <img src="assets/img/blueberries.png"  alt="blueberries">
-                    </span>
+                <span draggable="true" ondragstart="fruitdrag(event, ['blue'])" class="blue">
+                    <img src="assets/img/blueberries.png"  alt="blueberries">
+                </span>
 
-                    <span draggable="true" ondragstart="fruitdrag(event, ['yellow', 'green'])" class="yellow green">
-                        <img src="assets/img/banana.png" alt="banana">
-                    </span>
+                <span draggable="true" ondragstart="fruitdrag(event, ['yellow', 'green'])" class="yellow green">
+                    <img src="assets/img/banana.png" alt="banana">
+                </span>
 
-                    <span draggable="true" ondragstart="fruitdrag(event, ['red'])" class="red">
-                        <img src="assets/img/apple.png" alt="apple">
-                    </span>
+                <span draggable="true" ondragstart="fruitdrag(event, ['red'])" class="red">
+                    <img src="assets/img/apple.png" alt="apple">
+                </span>
 
-                <span draggable="true" ondragstart="fruitdrag(event, ['orange'])" class="orange">
-                        <img src="assets/img/carrot.png" alt="carrot">
-                    </span>
+            <span draggable="true" ondragstart="fruitdrag(event, ['orange'])" class="orange">
+                    <img src="assets/img/carrot.png" alt="carrot">
+                </span>
 
                 <span draggable="true" ondragstart="fruitdrag(event, ['green'])" class="green">
                 <img src="assets/img/honeydew.png" alt="honeydew">
+                </span>
+
+                <span draggable="true" ondragstart="fruitdrag(event, ['purple'])" class="purple">
+                    <img src="assets/img/beets.png" alt="beet">
                 </span>
 
                 <span draggable="true" ondragstart="fruitdrag(event, ['orange'])" class="orange">
                 <img src="assets/img/orange.png" alt="orange">
                 </span>
 
-                <span draggable="true" ondragstart="fruitdrag(event, ['orange'])" class="orange">
-                <img src="assets/img/cantaloupe.png" alt="orange">
-                </span>
-
                 <span draggable="true" ondragstart="fruitdrag(event, ['red'])" class="red">
                 <img src="assets/img/tomato.png" alt="red">
+                </span>
+
+                <span draggable="true" ondragstart="fruitdrag(event, ['orange'])" class="orange">
+                <img src="assets/img/cantaloupe.png" alt="orange">
                 </span>
 
                 <span draggable="true" ondragstart="fruitdrag(event, ['green'])" class="green">
                 <img src="assets/img/spinach.png" alt="spinach">
                 </span>
 
-                    <span draggable="true" ondragstart="fruitdrag(event, ['yellow', 'orange'])" class="yellow orange">
-                        <img src="assets/img/mango.png" alt="mango">
-                    </span>
+                <span draggable="true" ondragstart="fruitdrag(event, ['yellow', 'orange'])" class="yellow orange">
+                    <img src="assets/img/mango.png" alt="mango">
+                </span>
+
+                <span draggable="true" ondragstart="fruitdrag(event, ['purple'])" class="purple">
+                    <img src="assets/img/grape.png" alt="grape">
+                </span>
 
 
             </div>
 
         </section>
 
-        <section class="half">
+        <section class="right">
 
             <!--Cup-->
             <div class="cup">
@@ -123,7 +128,7 @@
 
              <!--Counter-->
             <div class="counter">
-                <p class="centerText"><span id="count" ></span> / 6 fruits</p>
+                <p class="centerText"><span id="count" ></span> / 6 items</p>
             </div>
 
             <!--"Let's Blend!" Button-->
