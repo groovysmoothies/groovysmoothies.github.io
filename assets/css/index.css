@@ -49,6 +49,21 @@ div#result {
     padding: 0;
 }
 
+/* instructions styling */
+
+#instructions {
+    font-size: 3em;
+    color: white;
+}
+
+
+
+/* fruits half */
+
+.fruitContainer {
+    margin-left: 100px;
+}
+
 .fruitContainer span {
     display: inline;
 }
@@ -56,14 +71,14 @@ div#result {
 .fruitContainer img {
     width: 20%;
     height: auto;
+    padding: 20px;
+
 }
+
+/* cup half */
 
 div.cup {
     position: relative;
-}
-
-div.cup img {
-    display: block;
 }
 
 div.fruitDump {
@@ -75,7 +90,8 @@ div.fruitDump {
     height: 100%;
 }
 
-section.half button {
+
+.half button {
     width: 50%;
 }
 

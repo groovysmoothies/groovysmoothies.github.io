@@ -37,18 +37,23 @@
         <div id="game" class="frame" shunt-frame>
              <section class="half">
 
+             <!--Instructions-->
+            <div>
+                <p class="centerText" id="instructions">Drag <span id="fruitNumber">3</span> <span id="fruitColor">red</span> fruits into the cup!</p>
+            </div>
+
             <!--Fruit Container-->
             <div class="fruitContainer">
 
                 <!--Fruits-->
-                    <span class="green">
-                        <img src="assets/img/banana.png" width="" height="" alt="spinach">
+                    <span class="blue">
+                        <img src="assets/img/blueberries.png" width="" height="" alt="blueberries">
                     </span>
                     <span class="yellow">
                         <img src="assets/img/banana.png" width="" height="" alt="banana">
                     </span>
-                    <span class="yellow">
-                        <img src="assets/img/banana.png" width="" height="" alt="pineapple">
+                    <span class="red">
+                        <img src="assets/img/apple.png" width="" height="" alt="apple">
                     </span>
 <!--
 
@@ -106,10 +111,10 @@
 
             <!--Cup-->
             <div class="cup">
-                <img src="assets/img/cup.png" width="" height="" alt="cup">
+                <img src="assets/img/cup.png" width="" height="" alt="cup" class="center">
 
                 <div class="fruitDump">
-                    <p>this is a cup</p>
+                    <p class="centerText">this is a cup</p>
                 </div>
 
 
@@ -127,14 +132,13 @@
             </div>
 
              <!--Counter-->
-            <div class="counter">
-                <p><span id="count"></span> / 5
-                </p>
+            <div>
+                <p class="centerText"><span id="count" ></span> / 5 fruits</p>
             </div>
 
             <!--"Let's Blend!" Button-->
             <div class="button">
-            <button>Blend!</button>
+            <button class="center">Blend!</button>
             </div>
 
         </section>
