@@ -25,7 +25,7 @@ div.frame {
 }
 
 div#intro {
-  background-image:url();
+  background-color:pink;
 }
 
 div#game {
@@ -33,7 +33,7 @@ div#game {
 }
 
 div#result {
-  background-image:url();
+  background-color:lightgreen;
 }
 
 

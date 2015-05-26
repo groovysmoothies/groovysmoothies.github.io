@@ -15,11 +15,15 @@ groovyShunt = new ShuntDiv(document.getElementById('main-container'), [
         enter_above: true,
     }),
 
-    new ShuntDiv.Transition('result', 'intro' , 'enterAnimateCss', 'click', {
+    new ShuntDiv.Transition('result', 'intro' , 'dualAnimateCss', 'click', {
         id: 'blendAnother',
-        animation_name: 'fadeInUp',
-        animation_time: 1000,
-        animation_function: 'cubic-bezier(.1,1,.61,.96)',
+        exit_animation_name: 'fadeOut',
+        exit_animation_time: 3000,
+        exit_animation_function: 'cubic-bezier(.1,1,.61,.96)',
+        enter_animation_name: 'fadeIn',
+        enter_animation_time: 3000,
+        enter_animation_function: 'cubic-bezier(.1,1,.61,.96)',
+        enter_above: true,
     }),
 
 ], {

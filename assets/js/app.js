@@ -29,12 +29,13 @@ function switchRandomColor(currentColor) {
 
 var fruitNumber = document.getElementById('fruitNumber');
 var fruitColor = document.getElementById('fruitColor');
+var fruitWord = document.getElementById('fruitWord');
 var count = document.getElementById('count');
 
 function updateText() {
   fruitNumber.innerHTML = currentCount.toString();
   fruitColor.innerHTML = currentColor;
-fruitWord.innerHTML = (currentCount == 1) ? "fruit" : "fruits";
+  fruitWord.innerHTML = (currentCount == 1) ? "food" : "foods";
   count.innerHTML = limit - counter;
 }
 
@@ -49,26 +50,25 @@ function blend() {
   if (groovy) {
     document.getElementById('game').dispatchEvent(new Event('shunt'));
   } else {
-
   }
 }
 
-function fruitdrag(e, color) {
-  e.dataTransfer.setData("color", color);
+function fruitdrag(e, colors) {
+  e.dataTransfer.setData("colors", JSON.stringify(colors));
 }
 
 function fruitdrop(e) {
   e.preventDefault();
 
-  c = e.dataTransfer.getData("color");
-
-  if ((c == currentColor) && (!groovy)) {
+  c = JSON.parse(e.dataTransfer.getData("colors"));
+  console.log(c);
+  if ((c.indexOf(currentColor) != 1) && (!groovy)) {
     --currentCount;
     --counter;
 
     cb = colorBlocks[counter];
     cb.classList.remove('clear');
-    cb.classList.add(c);
+    cb.classList.add(currentColor);
 
     if (counter == 0) {
         document.getElementById('blendButton').classList.remove('inactive');
