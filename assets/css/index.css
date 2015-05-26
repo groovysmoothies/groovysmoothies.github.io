@@ -69,7 +69,8 @@ div#result {
 }
 
 .fruitContainer img {
-    width: 20%;
+    width: 150px;
+    height: 150px;
     height: auto;
     padding: 20px;
 
