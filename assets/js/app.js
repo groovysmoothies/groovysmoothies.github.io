@@ -27,11 +27,14 @@ function switchRandomColor(currentColor) {
 }
 
 
+var fruitNumber = document.getElementById('fruitNumber');
+var fruitColor = document.getElementById('fruitColor');
+var count = document.getElementById('count');
 
 function updateText() {
-  document.getElementById('fruitNumber').innerHTML = currentCount.toString();
-  document.getElementById('fruitColor').innerHTML = currentColor;
-  document.getElementById('count').innerHTML = limit - counter;
+  fruitNumber.innerHTML = currentCount.toString();
+  fruitColor.innerHTML = currentColor;
+  count.innerHTML = limit - counter;
 }
 
 
@@ -87,3 +90,31 @@ function fruitdrop(e) {
 function fruitallowdrop(e) {
   e.preventDefault();
 }
+
+
+var blendButton = document.getElementById('blendButton');
+var congrats = document.getElementById('congrats');
+var instructions = document.getElementById('instructions');
+
+document.getElementById('blendAnother').addEventListener('click', function() {
+    window.location = "index.html";
+    //    window.location = "#game";
+//    window.location.reload();
+//    for (var i = colorBlocks.length-1; i >= 0; --i) {
+//        cb = colorBlocks[i];
+//        cb.className = "colorBlock clear";
+//        console.log(cb.className);
+//        console.log(i);
+//    }
+//
+//    console.log('wtf', i);
+//
+//    counter = limit;
+//    groovy = false;
+//    currentColor = getRandomColor();
+//    currentCount= getNewCount(counter);
+//    updateText();
+//    blendButton.classList.add('inactive');
+//    congrats.classList.add('hidden');
+//    instructions.classList.remove('hidden');
+});

@@ -87,6 +87,7 @@ div.cup {
 div.cup img {
     position: relative;
     z-index: 1;
+    opacity: .7;
 }
 
 div.fruitDump {

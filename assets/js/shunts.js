@@ -14,6 +14,14 @@ groovyShunt = new ShuntDiv(document.getElementById('main-container'), [
         enter_animation_function: 'cubic-bezier(.1,1,.61,.96)',
         enter_above: true,
     }),
+
+    new ShuntDiv.Transition('result', 'game' , 'enterAnimateCss', 'click', {
+        id: 'blendAnother',
+        animation_name: 'fadeInUp',
+        animation_time: 1000,
+        animation_function: 'cubic-bezier(.1,1,.61,.96)',
+    }),
+
 ], {
     default: 'intro',
     saveWithHash: true,
