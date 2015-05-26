@@ -29,7 +29,7 @@ div#intro {
 }
 
 div#game {
-  background-color:black;
+  background-color:darkcyan;
 }
 
 div#result {
@@ -60,6 +60,10 @@ div#result {
 
 div.cup {
     position: relative;
+}
+
+div.cup img {
+    display: block;
 }
 
 div.fruitDump {
