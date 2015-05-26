@@ -1,3 +1,7 @@
+// J-FUCKIN-S
+// ♫ LET'S GROOVE ♫
+// ♫ feat DJ KLAVN ♫
+
 var limit = 6;
 var counter = limit;
 var colors = ['blue', 'yellow', 'red'];
