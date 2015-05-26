@@ -2,6 +2,8 @@ var limit = 5;
 var counter = limit;
 var colors = ['blue', 'yellow', 'red'];
 
+
+
 var groovy = false;
 
 function getRandomColor() {

@@ -82,7 +82,14 @@ div.cup {
     position: relative;
 }
 
+div.cup img {
+    position: relative;
+    z-index: 1;
+}
+
 div.fruitDump {
+    z-index: 2;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -94,6 +101,35 @@ div.fruitDump {
 
 .half button {
     width: 50%;
+}
+
+.colorBlock {
+    height: 100px;
+    width:180px;
+}
+
+#colorBlocks {
+    position: absolute;
+    bottom: 0;
+
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.colorBlock.blockBlue {
+    background-color: blue;
+}
+
+.colorBlock.blockRed {
+    background-color: red;
+}
+
+.colorBlock.blockYellow {
+    background-color: yellow;
+}
+
+.colorBlock.blockClear {
+    border: 1px dashed black;
 }
 
 /* content */
