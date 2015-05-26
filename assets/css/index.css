@@ -21,7 +21,7 @@ div#main-container {
 }
 
 div.frame {
-  padding: 2em;
+  padding: 0em;
 }
 
 div#intro {
@@ -37,6 +37,44 @@ div#result {
 }
 
 
+/*  GAMEPLAY SCREEN */
+
+.half {
+    width: 50vw;
+    float: left;
+    display: inline;
+}
+
+.half img {
+    padding: 0;
+}
+
+.fruitContainer span {
+    display: inline;
+}
+
+.fruitContainer img {
+    width: 20%;
+    height: auto;
+}
+
+div.cup {
+    position: relative;
+}
+
+div.fruitDump {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+section.half button {
+    width: 50%;
+}
+
 /* content */
 
 .center {
@@ -51,7 +89,6 @@ div#result {
 }
 
 img {
-    /* padding*/
     padding:100px 0px;
 }
 
