@@ -33,6 +33,10 @@ div#game {
   background-color:darkcyan;
 }
 
+div#transition {
+  background-color:gold;
+}
+
 div#result {
   background-color:lightgreen;
 }
