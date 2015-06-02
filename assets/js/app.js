@@ -68,11 +68,11 @@ var transitionFrame = document.getElementById('transition');
 
 
 // array of facts
-var facts = ['Dark green veggies have more Vitamin C than light green ones!',
-             'The color \'orange\' was named after the fruit!',
-             'Red fruits and veggies keep your heart healthy!',
-             'Orange & yellow fruits and veggies keep your eyes strong!',
-             'Blue & purple fruits and veggies can improve your memory!'];
+var facts = ['Dark green veggies have more<br>Vitamin C than light green ones!',
+             'The color \'orange\' was named<br>after the fruit!',
+             'Red fruits and veggies<br>keep your heart healthy!',
+             'Orange & yellow fruits and veggies<br>keep your eyes strong!',
+             'Blue & purple fruits and veggies<br>can improve your memory!'];
 
 // return random fact from array of facts
 function getRandomFact() {

@@ -155,13 +155,13 @@
 
         <!-- TRANSITION SCREEN -->
         <div id="transition" class="frame" shunt-frame>
-            <section>
+            <section class="centerText">
             <!--Fact-->
-                <p class="centerText">Did you know?</p>
-            <p class="centerText"><span class="headerText" id="fact"></span></p>
+                <p class="didYouKnow">Did you know?</p>
+            <p class="fact"><span class="headerText" id="fact"></span></p>
 
             <!--Animation-->
-            <img src="http://www.w3.org/Style/Woolly/woolly-mc.png" alt="logo" width="" height="" class="center">
+            <img src="assets/img/loading.gif" alt="logo" width="" height="" class="center">
         </section>
         </div>
 
@@ -170,12 +170,20 @@
          <div id="result" class="frame" shunt-frame>
             <section>
 
+            <!--Side Images-->
+                <div class="fourCorners">
+                <img src="assets/img/side1.png" alt="logo" id="leftSide">
+                <img src="assets/img/side2.png" alt="logo" id="rightSide">
+                </div>
+
             <!--Text-->
             <p class="centerText headerText">Here's your Groovy Smoothie!
             </p>
 
             <!--Cup-->
-            <img src="assets/img/cup.png" alt="logo" width="" height="" class="center">
+            <img src="assets/img/wisps.png" alt="logo" width="200px" height="" class="center" id="wisps">
+            <img src="assets/img/smoothie.svg" alt="logo" width="230px" class="center" id="smoothie">
+            <img src="assets/img/cup.png" alt="logo" width="300px" class="center" id="cupFinal">
 
             <!--"Blend another!" Button-->
             <button class="center" id="blendAnother">Blend another!</button>

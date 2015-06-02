@@ -42,10 +42,55 @@ div#transition {
   background-color:#ee7e00;
 }
 
+.didYouKnow {
+    margin-top: 200px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.fact {
+    margin-top: 75px;
+    line-height: 56px;
+}
+
 div#result {
   background-color:#f38eb0;
 }
 
+#leftSide {
+    top: 70px;
+    left: 150px;
+    height: 800px;
+}
+
+#rightSide {
+    top: 70px;
+    right: 150px;
+    height: 800px;
+}
+
+#wisps {
+    padding-bottom:0px;
+    padding-top: 0px;
+}
+
+#smoothie {
+    padding-top:95px;
+    position: absolute;
+    left: 43%;
+    z-index: 1;
+}
+
+#cupFinal {
+    padding-top:15px;
+}
+
+#blendAnother {
+    width: 20vw;
+    height: 6vw;
+    font-size: 20pt;
+    margin-top: -45px;
+}
 
 /* LANDING SCREEN */
 
