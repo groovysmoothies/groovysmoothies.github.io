@@ -75,14 +75,15 @@ div#result {
 }
 
 #smoothie {
+    top:265px;
     padding-top:95px;
     position: absolute;
     left: 43%;
-    z-index: 1;
 }
 
 #cupFinal {
     padding-top:15px;
+    position: relative;
 }
 
 #blendAnother {
