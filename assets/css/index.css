@@ -26,11 +26,11 @@ div.frame {
 }
 
 div#intro {
-  background-color:pink;
+  background-color:#28B5F5;
 }
 
 div#game {
-  background-color:darkcyan;
+  background-color:#28B5F5;
 }
 
 div#transition {
@@ -39,6 +39,45 @@ div#transition {
 
 div#result {
   background-color:lightgreen;
+}
+
+
+/* LANDING SCREEN */
+
+.fourCorners img {
+    position: absolute;
+    height: auto;
+    padding: 0px;
+}
+
+#topLeft {
+    top: 100px;
+    left: 100px;
+    width: 302px;
+}
+
+#topRight {
+    top: 100px;
+    right: 100px;
+    width: 464px;
+}
+
+#bottomRight {
+    bottom: 100px;
+    right: 100px;
+    width: 306px;
+
+}
+
+#bottomLeft {
+    bottom: 100px;
+    left: 100px;
+    width: 464px;
+}
+
+.logo {
+    margin-top: 75px;
+    padding-bottom: 80px;
 }
 
 
@@ -222,7 +261,7 @@ img {
 
 button {
     /* background styling*/
-    width: 50vw;
+    width: 30vw;
     height: 20vh;
     background-color: hotpink;
     border-radius: 30px;

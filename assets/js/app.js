@@ -13,6 +13,9 @@ var colorBlocks = document.querySelectorAll('.colorBlock'); // setting color blo
 var groovy = false;
 
 
+var facts = ['fact#1', 'fact#2', 'fact#3', 'fact#4', 'fact#5']; // facts
+
+
 // randomize Gameplay variables
 
 function getRandomColor() {
@@ -143,12 +146,12 @@ function fruitdrop(e) {
 
       document.getElementById('aww').classList.remove('hidden');
 
-    // hide yay message
+    // hide aww message
 
       setTimeout(function(){
       console.log("yay");
           document.getElementById('aww').classList.add('hidden');
-      }, 1000);
+      }, 1200);
 
   }
 }
