@@ -7,6 +7,11 @@ body {
     height: 100vh;
     font-family: 'Quicksand', cursive;
     font-weight: 700;
+    color: white;
+}
+
+.headerText {
+    font-size: 3em;
 }
 
 
@@ -34,11 +39,11 @@ div#game {
 }
 
 div#transition {
-  background-color:gold;
+  background-color:#ee7e00;
 }
 
 div#result {
-  background-color:lightgreen;
+  background-color:#f38eb0;
 }
 
 
@@ -59,7 +64,7 @@ div#result {
 #topRight {
     top: 100px;
     right: 100px;
-    width: 464px;
+    width: 366px;
 }
 
 #bottomRight {
@@ -112,6 +117,7 @@ div#result {
     width: 100vw;
     height: 150px;
     margin-bottom: 50px;
+    box-shadow: 0px -45px 40px 40px #000;
 }
 
 .message p {
@@ -216,27 +222,27 @@ div.fruitDump {
 }
 
 .colorBlock.blue, #instructions.blue {
-    background-color: blue;
+    background-color: #0f45a7;
 }
 
 .colorBlock.red, #instructions.red {
-    background-color: crimson;
+    background-color: #bf2d23;
 }
 
 .colorBlock.yellow, #instructions.yellow {
-    background-color: gold;
+    background-color: #fccb00;
 }
 
 .colorBlock.orange, #instructions.orange {
-    background-color: orange;
+    background-color: #ee7e00;
 }
 
 .colorBlock.green, #instructions.green {
-    background-color: green;
+    background-color: #3b7d21;
 }
 
 .colorBlock.purple, #instructions.purple {
-    background-color: purple;
+    background-color: #751da9;
 }
 .colorBlock.clear {
     border: 1px dashed black;

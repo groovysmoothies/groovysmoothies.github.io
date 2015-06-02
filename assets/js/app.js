@@ -13,9 +13,6 @@ var colorBlocks = document.querySelectorAll('.colorBlock'); // setting color blo
 var groovy = false;
 
 
-var facts = ['fact#1', 'fact#2', 'fact#3', 'fact#4', 'fact#5']; // facts
-
-
 // randomize Gameplay variables
 
 function getRandomColor() {
@@ -68,9 +65,35 @@ updateText();
 var transitionFrame = document.getElementById('transition');
 
 
+
+
+// array of facts
+var facts = ['Dark green veggies have more Vitamin C than light green ones!',
+             'The color \'orange\' was named after the fruit!',
+             'Red fruits and veggies keep your heart healthy!',
+             'Orange & yellow fruits and veggies keep your eyes strong!',
+             'Blue & purple fruits and veggies can improve your memory!'];
+
+// return random fact from array of facts
+function getRandomFact() {
+  return facts[Math.floor(facts.length * Math.random())];
+}
+
+// displaying the fact
+var fact = document.getElementById('fact');
+
+function displayFact() {
+    fact.innerHTML = getRandomFact();
+}
+
+
+
 function blend() {
   if (groovy) {
     document.getElementById('game').dispatchEvent(new Event('shunt'));
+
+      // return random fact
+      displayFact();
 
       // triggers gameplay --> transition --> result
       setTimeout(function(){
