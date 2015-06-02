@@ -2,7 +2,6 @@
 // ♫ LET'S GROOVE ♫
 // ♫ feat DJ KLAVN ♫
 
-
 // initialize global variables
 
 var limit = 6;
@@ -61,7 +60,6 @@ var currentCount = getNewCount(counter);
 updateText();
 
 
-
 //--------------------------------------- dispatch shunt event --> gameplay --> transition screen
 
 var transitionFrame = document.getElementById('transition');
@@ -80,6 +78,12 @@ function blend() {
   }
 }
 
+// don't display yay / aww message until appropriately-colored fruit is placed in cup
+
+document.getElementById('yay').classList.add('hidden');
+document.getElementById('aww').classList.add('hidden');
+
+
 // drag + drop fruits
 
 function fruitdrag(e, colors) {
@@ -91,6 +95,9 @@ function fruitdrop(e) {
 
   c = JSON.parse(e.dataTransfer.getData("colors"));
   console.log(c);
+
+    // check if correctly-colored fruit added
+
   if ((c.indexOf(currentColor) != -1) && (!groovy)) {
     --currentCount;
     --counter;
@@ -98,6 +105,18 @@ function fruitdrop(e) {
     cb = colorBlocks[counter];
     cb.classList.remove('clear');
     cb.classList.add(currentColor);
+
+    // yay message
+
+      document.getElementById('yay').classList.remove('hidden');
+
+    // hide yay message
+
+      setTimeout(function(){
+      console.log("yay");
+          document.getElementById('yay').classList.add('hidden');
+      }, 1000);
+
 
     // check if all 6 fruits have been placed in cup
 
@@ -118,7 +137,18 @@ function fruitdrop(e) {
 
     updateText();
 
-  } else {
+  } else if (!groovy) {
+
+    // aww message
+
+      document.getElementById('aww').classList.remove('hidden');
+
+    // hide yay message
+
+      setTimeout(function(){
+      console.log("yay");
+          document.getElementById('aww').classList.add('hidden');
+      }, 1000);
 
   }
 }
