@@ -8,6 +8,22 @@ var limit = 6;
 var counter = limit; // counting down for colorblocks
 var colors = ['blue', 'yellow', 'red', 'orange', 'green', 'purple']; // colors of color blocks
 
+// map of hex values associated with colors
+// key = a string
+// value = wutever
+var colorMap = {
+        "blue": "#0f45a7",
+        "red": "#bf2d23",
+        "yellow": "#fccb00",
+        "orange": "#ee7e00",
+        "green": "#3b7d21",
+        "purple": "#751da9"
+    };
+
+// stores color of correctly-colored fruit dragged into cup
+var colorMapResult = [];
+
+
 var colorBlocks = document.querySelectorAll('.colorBlock'); // setting color block color
 
 var groovy = false;
@@ -86,14 +102,23 @@ function displayFact() {
     fact.innerHTML = getRandomFact();
 }
 
-
+ // set color in smoothie
+var colorResult = document.getElementById('colorResult');
+console.log(colorResult);
 
 function blend() {
   if (groovy) {
-    document.getElementById('game').dispatchEvent(new Event('shunt'));
+
+      // saved resulting color
+      result_color = Color_mixer.mix(colorMapResult).toHexString();
+      console.log(result_color);
+      document.getElementById('game').dispatchEvent(new Event('shunt'));
+
+      colorResult.style.backgroundColor = result_color;
 
       // return random fact
       displayFact();
+
 
       // triggers gameplay --> transition --> result
       setTimeout(function(){
@@ -128,16 +153,18 @@ function fruitdrop(e) {
     --currentCount;
     --counter;
 
+
+    // sets color of corresonding color block
     cb = colorBlocks[counter];
     cb.classList.remove('clear');
-    cb.classList.add(currentColor);
+      cb.classList.add(currentColor);
+
+    colorMapResult.push($.Color(colorMap[currentColor]));
 
     // yay message
-
-      document.getElementById('yay').classList.remove('hidden');
+ document.getElementById('yay').classList.remove('hidden');
 
     // hide yay message
-
       setTimeout(function(){
       console.log("yay");
           document.getElementById('yay').classList.add('hidden');
@@ -198,6 +225,8 @@ document.getElementById('blendAnother').addEventListener('click', function() {
         cb = colorBlocks[i];
         cb.className = "colorBlock clear";
     }
+
+    colorMapResult = [];
 
     counter = limit;
     groovy = false;

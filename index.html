@@ -124,7 +124,7 @@
 
                 <!--Color Blocks-->
                 <div id="colorBlocks">
-                    <div class="colorBlock clear">
+                    <div class="colorBlock clear" id="firstBlock">
                     </div>
                     <div class="colorBlock clear">
                     </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="colorBlock clear">
                     </div>
-                    <div class="colorBlock clear">
+                    <div class="colorBlock clear" id="lastBlock">
                     </div>
                 </div>
             </div>
@@ -181,9 +181,9 @@
             </p>
 
             <!--Cup-->
+            <div id="colorResult">&nbsp;</div>
             <img src="assets/img/wisps.png" alt="logo" width="200px" height="" class="center" id="wisps">
-            <img src="assets/img/cup.png" alt="logo" width="300px" class="center" id="cupFinal">
-                  <img src="assets/img/smoothie.svg" alt="logo" width="230px" class="center" id="smoothie"></img>
+            <img src="assets/img/cupfinal.png" alt="logo" width="450px" class="center" id="cupFinal">
 
 
             <!--"Blend another!" Button-->
@@ -193,8 +193,14 @@
 
     </div>
 
-    <!--shuntdiv js by kelvin lu-->
+    <!--jquery + color-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script type="text/javascript" src="assets/js/color_mixer.js"></script>
+
     <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <!--shuntdiv js by kelvin lu-->
     <script type="text/javascript" src="assets/js/shuntdiv.js"></script>
     <script type="text/javascript" src="assets/js/shunts.js"></script>
 
