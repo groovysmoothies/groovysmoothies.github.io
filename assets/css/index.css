@@ -72,10 +72,10 @@ div#result {
 
 #colorResult {
     background-color: #fff;
-    width: 200px;
+    width: 180px;
     height: 300px;
     position: absolute;
-    top: 370px;
+    top: 360px;
     left: 50%;
     transform: translateX(-50%); /* on own axis */
 }

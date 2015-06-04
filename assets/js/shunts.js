@@ -37,5 +37,6 @@ groovyShunt = new ShuntDiv(document.getElementById('main-container'), [
 
 ], {
     default: 'intro',
-    saveWithHash: true,
+    saveWithHash: false,
 });
+
