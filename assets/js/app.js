@@ -8,6 +8,16 @@ var limit = 6;
 var counter = limit; // counting down for colorblocks
 var colors = ['blue', 'yellow', 'red', 'orange', 'green', 'purple']; // colors of color blocks
 
+// sounds
+
+var sound_aww = new Audio("assets/sounds/aww.mp3");
+var sound_blending = new Audio("assets/sounds/blending.mp3");
+var sound_letsgroove = new Audio("assets/sounds/letsgroove.mp3");
+var sound_tada = new Audio("assets/sounds/tada.mp3");
+var sound_yay = new Audio("assets/sounds/yay.mp3");
+
+
+
 // map of hex values associated with colors
 // key = a string
 // value = wutever
@@ -55,6 +65,18 @@ var fruitNumber = document.getElementById('fruitNumber');
 var fruitColor = document.getElementById('fruitColor');
 var fruitWord = document.getElementById('fruitWord');
 var count = document.getElementById('count');
+
+
+// Let's Groove sounds
+
+document.getElementById('next-button').addEventListener('click', function() {
+    sound_letsgroove.load();
+    sound_letsgroove.play();
+    setTimeout(function() {
+        document.getElementById('intro').dispatchEvent(new Event("playGame"));
+    }, 800);
+});
+
 
 
 // update Gameplay text
@@ -114,6 +136,10 @@ function blend() {
       console.log(result_color);
       document.getElementById('game').dispatchEvent(new Event('shunt'));
 
+      // chk chk chk
+      sound_blending.load();
+      sound_blending.play();
+
       colorResult.style.backgroundColor = result_color;
 
       // return random fact
@@ -122,9 +148,18 @@ function blend() {
 
       // triggers gameplay --> transition --> result
       setTimeout(function(){
-      console.log("transitioning");
-          transitionFrame.dispatchEvent(new Event('shunt'));
+        console.log("transitioning");
+        transitionFrame.dispatchEvent(new Event('shunt'));
       }, 5000);
+
+      setTimeout(function(){
+        console.log("transitioning")
+        // add tada sound
+        sound_tada.load();
+        sound_tada.play();
+
+      }, 5400);
+
   } else {
   }
 }
@@ -153,6 +188,10 @@ function fruitdrop(e) {
     --currentCount;
     --counter;
 
+
+    // add yay sound
+    sound_yay.load();
+    sound_yay.play();
 
     // sets color of corresonding color block
     cb = colorBlocks[counter];
@@ -192,12 +231,14 @@ function fruitdrop(e) {
 
   } else if (!groovy) {
 
-    // aww message
+      // add aww sound
+    sound_aww.load();
+    sound_aww.play();
 
-      document.getElementById('aww').classList.remove('hidden');
+    // aww message
+    document.getElementById('aww').classList.remove('hidden');
 
     // hide aww message
-
       setTimeout(function(){
       console.log("yay");
           document.getElementById('aww').classList.add('hidden');

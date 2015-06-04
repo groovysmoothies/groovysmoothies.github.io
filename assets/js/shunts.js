@@ -1,8 +1,8 @@
 groovyShunt = new ShuntDiv(document.getElementById('main-container'), [
-    new ShuntDiv.Transition('intro', 'game' , 'enterAnimateCss', 'click', {
-        id: 'next-button',
+    new ShuntDiv.Transition('intro', 'game' , 'enterAnimateCss', 'event', {
+        eventName: 'playGame',
         animation_name: 'fadeInDown',
-        animation_time: 800,
+        animation_time: 1200,
         animation_function: 'cubic-bezier(.1,1,.61,.96)',
     }),
 
