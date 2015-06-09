@@ -14,8 +14,15 @@ var sound_aww = new Audio("assets/sounds/aww.mp3");
 var sound_blending = new Audio("assets/sounds/blending.mp3");
 var sound_letsgroove = new Audio("assets/sounds/letsgroove.mp3");
 var sound_tada = new Audio("assets/sounds/tada.mp3");
-var sound_yay = new Audio("assets/sounds/yay.mp3");
 
+var yayArray = [new Audio("assets/sounds/yay.mp3"),
+                new Audio("assets/sounds/yay2.mp3"),
+                new Audio("assets/sounds/yay3.mp3")]
+
+// select random array
+function getRandomYay() {
+  return yayArray[Math.floor(yayArray.length * Math.random())];
+}
 
 
 // map of hex values associated with colors
@@ -117,6 +124,7 @@ function getRandomFact() {
   return facts[Math.floor(facts.length * Math.random())];
 }
 
+
 // displaying the fact
 var fact = document.getElementById('fact');
 
@@ -190,8 +198,9 @@ function fruitdrop(e) {
 
 
     // add yay sound
-    sound_yay.load();
-    sound_yay.play();
+    var soundYay = getRandomYay();
+    soundYay.load();
+      soundYay.play();
 
     // sets color of corresonding color block
     cb = colorBlocks[counter];
@@ -249,14 +258,12 @@ function fruitdrop(e) {
 
 
 // we got this
-
 function fruitallowdrop(e) {
   e.preventDefault();
 }
 
 
 // resetting the GAME
-
 var blendButton = document.getElementById('blendButton');
 var congrats = document.getElementById('congrats');
 var instructions = document.getElementById('instructions');
