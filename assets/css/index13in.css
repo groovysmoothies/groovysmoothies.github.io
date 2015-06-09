@@ -186,7 +186,7 @@ div#result {
 #yay {
     width: 200px;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 335px;
     left: 62vw;
 }
@@ -194,7 +194,7 @@ div#result {
 #aww {
     width: 200px;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 335px;
     left: 62vw;
 }

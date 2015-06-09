@@ -28,6 +28,8 @@ div#main-container {
 
 div.frame {
   padding: 0em;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 div#intro {
@@ -184,7 +186,7 @@ div#result {
 #yay {
     width: 200px;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 325px;
     left: 61vw;
 }
@@ -192,7 +194,7 @@ div#result {
 #aww {
     width: 200px;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 335px;
     left: 61vw;
 }
