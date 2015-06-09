@@ -186,17 +186,17 @@ div#result {
 #yay {
     width: 200px;
     height: auto;
-    position: fixed;
-    top: 335px;
-    left: 62vw;
+    position: absolute;
+    top: 180px;
+    left: -105px;
 }
 
 #aww {
     width: 200px;
     height: auto;
-    position: fixed;
-    top: 335px;
-    left: 62vw;
+    position: absolute;
+    top: 180px;
+    left: -105px;
 }
 
 .hidden {
