@@ -28,7 +28,8 @@ div#main-container {
 
 div.frame {
   padding: 0em;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 div#intro {
